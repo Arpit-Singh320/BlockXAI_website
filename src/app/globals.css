@@ -5,9 +5,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* shadcn tokens */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -46,6 +47,22 @@
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* BlockXAI brand fonts */
+  --font-display: var(--font-bebas-neue);
+
+  /* BlockXAI brand colors */
+  --color-bx-red: #df2531;
+  --color-bx-red-deep: #b81a26;
+  --color-bx-ink: #0b0b0d;
+  --color-bx-ink-2: #111115;
+  --color-bx-surface: #17181d;
+  --color-bx-surface-2: #1d1e24;
+  --color-bx-paper: #f3efe8;
+  --color-bx-paper-2: #eceae4;
+  --color-bx-line: rgba(255,255,255,0.1);
+  --color-bx-line-dark: rgba(0,0,0,0.08);
+  --color-bx-red-soft: rgba(223,37,49,0.12);
 }
 
 :root {
@@ -126,5 +143,54 @@
   }
   html {
     @apply font-sans;
+    scroll-behavior: smooth;
   }
 }
+
+/* BlockXAI base overrides */
+*, *::before, *::after { box-sizing: border-box; }
+
+.font-display {
+  font-family: var(--font-bebas-neue), "Arial Narrow", "Arial", sans-serif;
+}
+
+/* Utility: container with max-width */
+.bx-container {
+  width: min(calc(100% - 48px), 1240px);
+  margin-inline: auto;
+}
+
+/* Section spacing */
+.bx-section {
+  padding-block: 96px;
+  position: relative;
+}
+
+/* Eyebrow label */
+.bx-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #df2531;
+}
+
+.bx-eyebrow::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #df2531;
+  flex-shrink: 0;
+}
+
+/* Remove default button/input font inheritance issue */
+button, input, select, textarea { font: inherit; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0b0b0d; }
+::-webkit-scrollbar-thumb { background: #df2531; border-radius: 3px; }
