@@ -5,10 +5,11 @@ import { WhyBlockXAI } from "@/components/home/WhyBlockXAI";
 import { Industries } from "@/components/home/Industries";
 import { Process } from "@/components/home/Process";
 import { ConsultationCTA } from "@/components/home/ConsultationCTA";
+import { PageTransition } from "@/components/layout/PageTransition";
 
 export default function HomePage() {
   return (
-    <>
+    <PageTransition>
       <Hero />
       <TrustStrip />
       <Services />
@@ -16,6 +17,6 @@ export default function HomePage() {
       <Industries />
       <Process />
       <ConsultationCTA />
-    </>
+    </PageTransition>
   );
 }

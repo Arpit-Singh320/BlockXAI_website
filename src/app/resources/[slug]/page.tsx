@@ -51,7 +51,7 @@ export default async function ArticlePage({ params }: Props) {
             width: "600px",
             height: "400px",
             borderRadius: "50%",
-            background: "radial-gradient(ellipse, rgba(223,37,49,0.08) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, rgba(196,30,58,0.08) 0%, transparent 70%)",
             pointerEvents: "none",
           }}
         />
@@ -85,10 +85,10 @@ export default async function ArticlePage({ params }: Props) {
                   alignItems: "center",
                   gap: "5px",
                   padding: "5px 12px",
-                  background: "rgba(223,37,49,0.1)",
-                  border: "1px solid rgba(223,37,49,0.2)",
+                  background: "rgba(196,30,58,0.1)",
+                  border: "1px solid rgba(196,30,58,0.2)",
                   borderRadius: "6px",
-                  color: "#df2531",
+                  color: "#C41E3A",
                   fontSize: "11px",
                   fontWeight: 800,
                   letterSpacing: "0.12em",
@@ -130,7 +130,7 @@ export default async function ArticlePage({ params }: Props) {
               color: "rgba(255,255,255,0.6)",
               fontSize: "clamp(15px, 1.6vw, 17px)",
               lineHeight: 1.75,
-              borderLeft: "3px solid #df2531",
+              borderLeft: "3px solid #C41E3A",
               paddingLeft: "20px",
             }}
           >
@@ -163,7 +163,7 @@ export default async function ArticlePage({ params }: Props) {
                       paddingLeft: "16px",
                     }}
                   >
-                    <span style={{ color: "#df2531", fontSize: "18px", lineHeight: 1.5, flexShrink: 0 }}>—</span>
+                    <span style={{ color: "#C41E3A", fontSize: "18px", lineHeight: 1.5, flexShrink: 0 }}>—</span>
                     <p style={{ margin: 0, color: "rgba(255,255,255,0.7)", fontSize: "15px", lineHeight: 1.8 }}>
                       {para.replace(/^[●\-]\s*/, "")}
                     </p>
@@ -231,7 +231,7 @@ export default async function ArticlePage({ params }: Props) {
                 alignItems: "center",
                 gap: "8px",
                 padding: "12px 24px",
-                background: "#df2531",
+                background: "#C41E3A",
                 color: "white",
                 fontSize: "14px",
                 fontWeight: 700,
@@ -269,7 +269,7 @@ export default async function ArticlePage({ params }: Props) {
                 >
                   <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
                     {a.tags.slice(0, 2).map((t) => (
-                      <span key={t} style={{ padding: "3px 8px", background: "rgba(223,37,49,0.1)", borderRadius: "4px", color: "#df2531", fontSize: "10px", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase" }}>{t}</span>
+                      <span key={t} style={{ padding: "3px 8px", background: "rgba(196,30,58,0.1)", borderRadius: "4px", color: "#C41E3A", fontSize: "10px", fontWeight: 800, letterSpacing: "0.1em", textTransform: "uppercase" }}>{t}</span>
                     ))}
                   </div>
                   <p style={{ margin: 0, color: "white", fontSize: "14px", fontWeight: 700, lineHeight: 1.4 }}>{a.title}</p>
@@ -282,7 +282,7 @@ export default async function ArticlePage({ params }: Props) {
 
         <style>{`
           .back-link:hover { color: white !important; }
-          .more-article-card:hover { border-color: rgba(223,37,49,0.2) !important; background: #1a1b21 !important; }
+          .more-article-card:hover { border-color: rgba(196,30,58,0.2) !important; background: #1a1b21 !important; }
           @media (max-width: 600px) { .more-articles-grid { grid-template-columns: 1fr !important; } }
         `}</style>
       </section>

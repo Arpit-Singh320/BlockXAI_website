@@ -36,9 +36,9 @@ const FOOTER_COLS = [
   {
     title: "Legal",
     links: [
-      { text: "Privacy Policy", href: "#" },
-      { text: "Terms of Service", href: "#" },
-      { text: "Cookie Policy", href: "#" },
+      { text: "Privacy Policy", href: "/contact" },
+      { text: "Terms of Service", href: "/contact" },
+      { text: "Cookie Policy", href: "/contact" },
     ],
   },
 ];
@@ -66,22 +66,22 @@ export default function Footer4() {
                 style={{ margin: 0, fontSize: "clamp(2.8rem, 5.5vw, 6rem)", lineHeight: 0.9, letterSpacing: "0.01em", color: "white", maxWidth: "640px" }}
               >
                 READY TO BUILD THE{" "}
-                <span style={{ color: "#df2531" }}>FUTURE</span>?
+                <span style={{ color: "#C41E3A" }}>FUTURE</span>?
               </h2>
               <Link
                 href="/contact"
                 style={{
                   display: "inline-flex", alignItems: "center", gap: "10px",
-                  padding: "16px 28px", background: "#df2531", color: "white",
+                  padding: "16px 28px", background: "#C41E3A", color: "white",
                   fontSize: "14px", fontWeight: 700, textDecoration: "none",
                   borderRadius: "12px", letterSpacing: "0.06em",
-                  boxShadow: "0 8px 24px rgba(223,37,49,0.22)",
+                  boxShadow: "0 8px 24px rgba(196,30,58,0.22)",
                   transition: "background 0.2s", flexShrink: 0,
                 }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#b81a26"; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#df2531"; }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#9B1520"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#C41E3A"; }}
               >
-                Book a Free Consultation <ArrowRight size={16} />
+                Get Started Today <ArrowRight size={16} />
               </Link>
             </motion.div>
           </div>
@@ -113,15 +113,15 @@ export default function Footer4() {
 
                 <div style={{ display: "grid", gap: "12px", marginBottom: "32px" }}>
                   {[
-                    { icon: Phone, val: "+44 7440 183728", href: "tel:+447440183728" },
-                    { icon: Mail, val: "contact@blockxint.com", href: "mailto:contact@blockxint.com" },
-                    { icon: MapPin, val: "Wembley, England, HA9 8NX", href: "#" },
+                    { icon: Phone, val: "+44 7440183728", href: "tel:+447440183728" },
+                    { icon: Mail, val: "info@blockxint.com", href: "mailto:info@blockxint.com" },
+                    { icon: MapPin, val: "18 Elmstead Avenue, Wembley, HA9 8NX", href: "https://maps.google.com/?q=18+Elmstead+Avenue+Wembley+HA9+8NX" },
                   ].map(({ icon: Icon, val, href }) => (
                     <a key={val} href={href} style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", color: "rgba(255,255,255,0.5)", fontSize: "13px", transition: "color 0.2s" }}
                       onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "white"; }}
                       onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.5)"; }}
                     >
-                      <Icon size={13} color="#df2531" style={{ flexShrink: 0 }} />
+                      <Icon size={13} color="#C41E3A" style={{ flexShrink: 0 }} />
                       {val}
                     </a>
                   ))}
@@ -139,17 +139,17 @@ export default function Footer4() {
                       border: "1px solid rgba(255,255,255,0.1)", borderRight: "none",
                       borderRadius: "8px 0 0 8px", color: "white", fontSize: "13px", outline: "none",
                     }}
-                    onFocus={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#df2531"; }}
+                    onFocus={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#C41E3A"; }}
                     onBlur={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)"; }}
                   />
                   <button
                     style={{
-                      padding: "11px 16px", background: "#df2531", border: "none",
+                      padding: "11px 16px", background: "#C41E3A", border: "none",
                       borderRadius: "0 8px 8px 0", cursor: "pointer", color: "white",
                       display: "flex", alignItems: "center", transition: "background 0.2s",
                     }}
-                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#b81a26"; }}
-                    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#df2531"; }}
+                    onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#9B1520"; }}
+                    onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#C41E3A"; }}
                     aria-label="Subscribe"
                   >
                     <ArrowRight size={15} />

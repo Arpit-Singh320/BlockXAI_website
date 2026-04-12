@@ -79,16 +79,16 @@ export function Footer() {
 
             <div style={{ display: "grid", gap: "10px", marginTop: "8px" }}>
               <div style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
-                <span style={{ color: "#df2531", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em", paddingTop: "2px", flexShrink: 0 }}>Location</span>
+                <span style={{ color: "#C41E3A", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em", paddingTop: "2px", flexShrink: 0 }}>Location</span>
                 <span style={{ fontSize: "13px", color: "rgba(255,255,255,0.56)" }}>18 Elmstead Avenue, Wembley, England, HA9 8NX</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <span style={{ color: "#df2531", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em", flexShrink: 0 }}>Phone</span>
-                <a href="tel:+447440183728" style={{ color: "rgba(255,255,255,0.72)", textDecoration: "none", fontSize: "13px" }}>+44 7440 183728</a>
+                <span style={{ color: "#C41E3A", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em", flexShrink: 0 }}>Phone</span>
+                <a href="tel:+447440183728" style={{ color: "rgba(255,255,255,0.72)", textDecoration: "none", fontSize: "13px" }}>+44 7440183728</a>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <span style={{ color: "#df2531", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em", flexShrink: 0 }}>Email</span>
-                <a href="mailto:contact@blockxint.com" style={{ color: "rgba(255,255,255,0.72)", textDecoration: "none", fontSize: "13px" }}>contact@blockxint.com</a>
+                <span style={{ color: "#C41E3A", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em", flexShrink: 0 }}>Email</span>
+                <a href="mailto:info@blockxint.com" style={{ color: "rgba(255,255,255,0.72)", textDecoration: "none", fontSize: "13px" }}>info@blockxint.com</a>
               </div>
             </div>
           </div>
@@ -125,8 +125,8 @@ export function Footer() {
 
         {/* CTA banner */}
         <div style={{
-          background: "rgba(223,37,49,0.08)",
-          border: "1px solid rgba(223,37,49,0.2)",
+          background: "rgba(196,30,58,0.08)",
+          border: "1px solid rgba(196,30,58,0.2)",
           borderRadius: "16px",
           padding: "32px 40px",
           display: "flex",
@@ -148,7 +148,7 @@ export function Footer() {
               href="/contact"
               style={{
                 padding: "14px 26px",
-                background: "#df2531",
+                background: "#C41E3A",
                 color: "white",
                 fontSize: "14px",
                 fontWeight: 700,
@@ -156,7 +156,7 @@ export function Footer() {
                 borderRadius: "10px",
                 letterSpacing: "0.04em",
                 whiteSpace: "nowrap",
-                boxShadow: "0 8px 24px rgba(223,37,49,0.24)",
+                boxShadow: "0 8px 24px rgba(196,30,58,0.24)",
               }}
             >
               Get Started

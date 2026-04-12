@@ -23,7 +23,7 @@ export function ConsultationCTA() {
           width: "500px",
           height: "500px",
           borderRadius: "50%",
-          background: "radial-gradient(ellipse, rgba(223,37,49,0.14) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse, rgba(196,30,58,0.14) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -66,7 +66,7 @@ export function ConsultationCTA() {
               color: "white",
             }}
           >
-            OVER <span style={{ color: "#df2531" }}>400</span>{" "}
+            OVER <span style={{ color: "#C41E3A" }}>400</span>{" "}
             COMPANIES HAVE ALREADY TRIED
           </h2>
 
@@ -77,9 +77,9 @@ export function ConsultationCTA() {
           {/* Contact details */}
           <div style={{ display: "grid", gap: "14px" }}>
             {[
-              { icon: Phone, label: "+44 7440 183728", href: "tel:+447440183728" },
-              { icon: Mail, label: "contact@blockxint.com", href: "mailto:contact@blockxint.com" },
-              { icon: MapPin, label: "18 Elmstead Avenue, Wembley, England, HA9 8NX", href: "#" },
+              { icon: Phone, label: "+44 7440183728", href: "tel:+447440183728" },
+              { icon: Mail, label: "info@blockxint.com", href: "mailto:info@blockxint.com" },
+              { icon: MapPin, label: "18 Elmstead Avenue, Wembley, England, HA9 8NX", href: "https://maps.google.com/?q=18+Elmstead+Avenue+Wembley+HA9+8NX" },
             ].map(({ icon: Icon, label, href }) => (
               <a
                 key={label}
@@ -128,7 +128,7 @@ export function ConsultationCTA() {
           }}
         >
           {/* Red top bar */}
-          <div style={{ height: "4px", background: "#df2531" }} />
+          <div style={{ height: "4px", background: "#C41E3A" }} />
 
           <div style={{ padding: "36px" }}>
             <h3
@@ -140,7 +140,7 @@ export function ConsultationCTA() {
                 letterSpacing: "0.02em",
               }}
             >
-              Book a Free Consultation
+              Get Started Today
             </h3>
             <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "14px", margin: "0 0 28px", lineHeight: 1.6 }}>
               No obligation. We&apos;ll assess your needs and recommend the most impactful solution for your business.
@@ -154,8 +154,8 @@ export function ConsultationCTA() {
                 "Clear scoping and indicative cost",
               ].map((item) => (
                 <div key={item} style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
-                  <span style={{ width: "20px", height: "20px", borderRadius: "50%", background: "rgba(223,37,49,0.12)", border: "1px solid rgba(223,37,49,0.24)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: "1px" }}>
-                    <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#df2531" }} />
+                  <span style={{ width: "20px", height: "20px", borderRadius: "50%", background: "rgba(196,30,58,0.12)", border: "1px solid rgba(196,30,58,0.24)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: "1px" }}>
+                    <span style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#C41E3A" }} />
                   </span>
                   <span style={{ color: "rgba(255,255,255,0.64)", fontSize: "14px" }}>{item}</span>
                 </div>
@@ -171,18 +171,18 @@ export function ConsultationCTA() {
                   justifyContent: "center",
                   gap: "10px",
                   padding: "16px",
-                  background: "#df2531",
+                  background: "#C41E3A",
                   color: "white",
                   fontSize: "15px",
                   fontWeight: 700,
                   textDecoration: "none",
                   borderRadius: "12px",
                   letterSpacing: "0.04em",
-                  boxShadow: "0 8px 24px rgba(223,37,49,0.24)",
+                  boxShadow: "0 8px 24px rgba(196,30,58,0.24)",
                   transition: "background 0.2s",
                 }}
-                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#b81a26"; }}
-                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#df2531"; }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#9B1520"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#C41E3A"; }}
               >
                 Get Started Today
                 <ArrowRight size={16} />

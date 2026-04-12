@@ -52,8 +52,8 @@
   --font-display: var(--font-bebas-neue);
 
   /* BlockXAI brand colors */
-  --color-bx-red: #df2531;
-  --color-bx-red-deep: #b81a26;
+  --color-bx-red: #C41E3A;
+  --color-bx-red-deep: #9B1520;
   --color-bx-ink: #0b0b0d;
   --color-bx-ink-2: #111115;
   --color-bx-surface: #17181d;
@@ -62,7 +62,7 @@
   --color-bx-paper-2: #eceae4;
   --color-bx-line: rgba(255,255,255,0.1);
   --color-bx-line-dark: rgba(0,0,0,0.08);
-  --color-bx-red-soft: rgba(223,37,49,0.12);
+  --color-bx-red-soft: rgba(196,30,58,0.12);
 }
 
 :root {
@@ -175,7 +175,7 @@
   font-weight: 800;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #df2531;
+  color: #C41E3A;
 }
 
 .bx-eyebrow::before {
@@ -183,7 +183,7 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: #df2531;
+  background: #C41E3A;
   flex-shrink: 0;
 }
 
@@ -193,4 +193,4 @@ button, input, select, textarea { font: inherit; }
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #0b0b0d; }
-::-webkit-scrollbar-thumb { background: #df2531; border-radius: 3px; }
+::-webkit-scrollbar-thumb { background: #C41E3A; border-radius: 3px; }

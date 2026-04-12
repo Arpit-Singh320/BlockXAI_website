@@ -95,7 +95,7 @@ export function Preloader() {
         <div
           style={{
             height: "100%",
-            background: "#df2531",
+            background: "#C41E3A",
             animation: "preload-bar 1.5s cubic-bezier(0.4,0,0.2,1) forwards",
           }}
         />

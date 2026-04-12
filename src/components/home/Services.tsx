@@ -75,7 +75,7 @@ export function Services() {
           className="section-header"
         >
           <div>
-            <span className="bx-eyebrow" style={{ color: "#df2531" }}>
+            <span className="bx-eyebrow" style={{ color: "#C41E3A" }}>
               What We Do
             </span>
             <h2
@@ -121,7 +121,7 @@ export function Services() {
               whiteSpace: "nowrap",
               transition: "background 0.2s",
             }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#df2531"; }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#C41E3A"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#0b0b0d"; }}
           >
             All Services
@@ -186,7 +186,7 @@ export function Services() {
                     width: "160px",
                     height: "160px",
                     borderRadius: "50%",
-                    background: "rgba(223,37,49,0.18)",
+                    background: "rgba(196,30,58,0.18)",
                     filter: "blur(40px)",
                     pointerEvents: "none",
                   }}
@@ -261,7 +261,7 @@ export function Services() {
                         width: "5px",
                         height: "5px",
                         borderRadius: "50%",
-                        background: "#df2531",
+                        background: "#C41E3A",
                         flexShrink: 0,
                         marginTop: "7px",
                       }}
@@ -277,7 +277,7 @@ export function Services() {
                   display: "flex",
                   alignItems: "center",
                   gap: "8px",
-                  color: svc.accent ? "white" : "#df2531",
+                  color: svc.accent ? "white" : "#C41E3A",
                   fontSize: "13px",
                   fontWeight: 700,
                   letterSpacing: "0.08em",

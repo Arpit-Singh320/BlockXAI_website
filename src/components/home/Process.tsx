@@ -102,7 +102,7 @@ export function Process() {
                   width: "clamp(48px, 5.5vw, 64px)",
                   height: "clamp(48px, 5.5vw, 64px)",
                   borderRadius: "50%",
-                  background: i === 0 ? "#df2531" : "#17181d",
+                  background: i === 0 ? "#C41E3A" : "#17181d",
                   border: i === 0 ? "none" : "1px solid rgba(255,255,255,0.1)",
                   display: "flex",
                   alignItems: "center",

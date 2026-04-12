@@ -42,14 +42,14 @@ export function PageHero({ eyebrow, title, titleAccent, subtitle, dark = true }:
           height: "400px",
           borderRadius: "50%",
           background: dark
-            ? "radial-gradient(ellipse, rgba(223,37,49,0.1) 0%, transparent 70%)"
-            : "radial-gradient(ellipse, rgba(223,37,49,0.07) 0%, transparent 70%)",
+            ? "radial-gradient(ellipse, rgba(196,30,58,0.1) 0%, transparent 70%)"
+            : "radial-gradient(ellipse, rgba(196,30,58,0.07) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
 
       <div className="bx-container" style={{ position: "relative", zIndex: 1 }}>
-        <span className="bx-eyebrow" style={{ color: "#df2531" }}>{eyebrow}</span>
+        <span className="bx-eyebrow" style={{ color: "#C41E3A" }}>{eyebrow}</span>
         <h1
           className="font-display"
           style={{
@@ -64,7 +64,7 @@ export function PageHero({ eyebrow, title, titleAccent, subtitle, dark = true }:
           {titleAccent && (
             <>
               {" "}
-              <span style={{ color: "#df2531" }}>{titleAccent}</span>
+              <span style={{ color: "#C41E3A" }}>{titleAccent}</span>
             </>
           )}
         </h1>

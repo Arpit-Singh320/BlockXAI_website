@@ -45,7 +45,7 @@ const FAQS: Record<string, { title: string; faqs: { question: string; answer: st
       { question: "When was BlockX AI Limited founded?", answer: "BlockX AI Limited was established in 2020 and is registered in England & Wales. We have since grown to serve over 400 companies across multiple industries and geographies." },
       { question: "Where is BlockX AI Limited based?", answer: "We are headquartered in London, England — 18 Elmstead Avenue, Wembley, HA9 8NX. While London-based, we work with clients globally and offer remote consulting engagements." },
       { question: "What makes BlockXAI different from other consultancies?", answer: "We combine deep technical blockchain expertise with AI specialisation under one roof. Our team of blockchain architects, AI specialists, and technology strategists deliver end-to-end solutions rather than siloed advice — giving clients a single trusted partner for digital transformation." },
-      { question: "How can I get in touch?", answer: "You can reach us via phone at +44 7440 183728, email at contact@blockxint.com, or fill in the contact form on our website. We typically respond within 24 hours on weekdays." },
+      { question: "How can I get in touch?", answer: "You can reach us via phone at +44 7440183728, email at info@blockxint.com, or fill in the contact form on our website. We typically respond within 24 hours on weekdays." },
     ],
   },
 };
@@ -71,7 +71,7 @@ export default function FAQ3() {
             className="font-display"
             style={{ fontSize: "clamp(2.4rem, 5vw, 5rem)", lineHeight: 0.9, letterSpacing: "0.02em", color: "white", marginBottom: "36px" }}
           >
-            FREQUENTLY ASKED <span style={{ color: "#df2531" }}>QUESTIONS</span>
+            FREQUENTLY ASKED <span style={{ color: "#C41E3A" }}>QUESTIONS</span>
           </motion.h2>
 
           <div style={{ display: "flex", alignItems: "center", flexWrap: "wrap", gap: "8px" }}>
@@ -84,10 +84,10 @@ export default function FAQ3() {
                 onClick={() => changeCategory(cat.id)}
                 style={{
                   padding: "10px 22px",
-                  border: selectedCategory === cat.id ? "1px solid #df2531" : "1px solid rgba(255,255,255,0.12)",
+                  border: selectedCategory === cat.id ? "1px solid #C41E3A" : "1px solid rgba(255,255,255,0.12)",
                   borderRadius: "999px",
-                  background: selectedCategory === cat.id ? "rgba(223,37,49,0.1)" : "transparent",
-                  color: selectedCategory === cat.id ? "#df2531" : "rgba(255,255,255,0.6)",
+                  background: selectedCategory === cat.id ? "rgba(196,30,58,0.1)" : "transparent",
+                  color: selectedCategory === cat.id ? "#C41E3A" : "rgba(255,255,255,0.6)",
                   fontSize: "13px",
                   fontWeight: 700,
                   letterSpacing: "0.08em",
@@ -134,8 +134,8 @@ export default function FAQ3() {
                     <span style={{ fontSize: "15px", fontWeight: 700, color: openIndex === i ? "white" : "rgba(255,255,255,0.78)", lineHeight: 1.4, flex: 1, transition: "color 0.2s" }}>
                       {faq.question}
                     </span>
-                    <div style={{ width: "28px", height: "28px", borderRadius: "50%", border: "1px solid rgba(255,255,255,0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: "2px", background: openIndex === i ? "rgba(223,37,49,0.1)" : "transparent", borderColor: openIndex === i ? "rgba(223,37,49,0.3)" : "rgba(255,255,255,0.12)", transition: "all 0.2s" }}>
-                      {openIndex === i ? <Minus size={13} color="#df2531" /> : <Plus size={13} color="rgba(255,255,255,0.5)" />}
+                    <div style={{ width: "28px", height: "28px", borderRadius: "50%", border: "1px solid rgba(255,255,255,0.12)", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: "2px", background: openIndex === i ? "rgba(196,30,58,0.1)" : "transparent", borderColor: openIndex === i ? "rgba(196,30,58,0.3)" : "rgba(255,255,255,0.12)", transition: "all 0.2s" }}>
+                      {openIndex === i ? <Minus size={13} color="#C41E3A" /> : <Plus size={13} color="rgba(255,255,255,0.5)" />}
                     </div>
                   </button>
 

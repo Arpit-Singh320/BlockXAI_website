@@ -80,7 +80,7 @@ export function Hero() {
           left: "-60px",
           width: "480px",
           height: "480px",
-          background: "radial-gradient(ellipse at 30% 40%, rgba(223,37,49,0.14) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse at 30% 40%, rgba(196,30,58,0.14) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -155,7 +155,7 @@ export function Hero() {
                 style={{
                   display: "block",
                   fontSize: "clamp(3.8rem, 6.8vw, 7rem)",
-                  color: "#df2531",
+                  color: "#C41E3A",
                 }}
               >
                 &amp; AI
@@ -199,30 +199,30 @@ export function Hero() {
                 alignItems: "center",
                 gap: "10px",
                 padding: "16px 28px",
-                background: "#df2531",
+                background: "#C41E3A",
                 color: "white",
                 fontWeight: 700,
                 fontSize: "15px",
                 letterSpacing: "0.04em",
                 borderRadius: "12px",
                 textDecoration: "none",
-                boxShadow: "0 12px 32px rgba(223,37,49,0.28)",
+                boxShadow: "0 12px 32px rgba(196,30,58,0.28)",
                 transition: "background 0.2s, transform 0.2s, box-shadow 0.2s",
               }}
               onMouseEnter={(e) => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.background = "#b81a26";
+                el.style.background = "#9B1520";
                 el.style.transform = "translateY(-2px)";
-                el.style.boxShadow = "0 16px 40px rgba(223,37,49,0.36)";
+                el.style.boxShadow = "0 16px 40px rgba(196,30,58,0.36)";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLElement;
-                el.style.background = "#df2531";
+                el.style.background = "#C41E3A";
                 el.style.transform = "translateY(0)";
-                el.style.boxShadow = "0 12px 32px rgba(223,37,49,0.28)";
+                el.style.boxShadow = "0 12px 32px rgba(196,30,58,0.28)";
               }}
             >
-              Book a Free Consultation
+              Get Started Today
               <ArrowRight size={16} />
             </Link>
 
@@ -292,7 +292,7 @@ export function Hero() {
                 }}
               >
                 <span
-                  style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#df2531", flexShrink: 0 }}
+                  style={{ width: "5px", height: "5px", borderRadius: "50%", background: "#C41E3A", flexShrink: 0 }}
                 />
                 {chip}
               </span>
@@ -322,7 +322,7 @@ export function Hero() {
             <div
               style={{
                 height: "4px",
-                background: "linear-gradient(90deg, #df2531 0%, rgba(223,37,49,0.3) 100%)",
+                background: "linear-gradient(90deg, #C41E3A 0%, rgba(196,30,58,0.3) 100%)",
               }}
             />
 
@@ -403,8 +403,8 @@ export function Hero() {
                     }}
                     onMouseEnter={(e) => {
                       const el = e.currentTarget as HTMLElement;
-                      el.style.background = "rgba(223,37,49,0.07)";
-                      el.style.borderColor = "rgba(223,37,49,0.2)";
+                      el.style.background = "rgba(196,30,58,0.07)";
+                      el.style.borderColor = "rgba(196,30,58,0.2)";
                     }}
                     onMouseLeave={(e) => {
                       const el = e.currentTarget as HTMLElement;
@@ -417,14 +417,14 @@ export function Hero() {
                         width: "36px",
                         height: "36px",
                         borderRadius: "8px",
-                        background: "rgba(223,37,49,0.12)",
-                        border: "1px solid rgba(223,37,49,0.2)",
+                        background: "rgba(196,30,58,0.12)",
+                        border: "1px solid rgba(196,30,58,0.2)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                       }}
                     >
-                      <Icon size={16} color="#df2531" />
+                      <Icon size={16} color="#C41E3A" />
                     </div>
                     <div>
                       <p style={{ margin: 0, color: "white", fontSize: "13px", fontWeight: 700, letterSpacing: "0.06em" }}>
@@ -441,8 +441,8 @@ export function Hero() {
               {/* Bottom label */}
               <div
                 style={{
-                  background: "rgba(223,37,49,0.06)",
-                  border: "1px solid rgba(223,37,49,0.14)",
+                  background: "rgba(196,30,58,0.06)",
+                  border: "1px solid rgba(196,30,58,0.14)",
                   borderRadius: "10px",
                   padding: "14px 16px",
                   display: "flex",
@@ -455,7 +455,7 @@ export function Hero() {
                 </span>
                 <span
                   style={{
-                    background: "#df2531",
+                    background: "#C41E3A",
                     color: "white",
                     fontSize: "10px",
                     fontWeight: 800,
@@ -481,7 +481,7 @@ export function Hero() {
               width: "80px",
               height: "80px",
               borderRadius: "50%",
-              background: "rgba(223,37,49,0.2)",
+              background: "rgba(196,30,58,0.2)",
               filter: "blur(24px)",
               pointerEvents: "none",
             }}

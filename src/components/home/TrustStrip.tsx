@@ -118,7 +118,7 @@ export function TrustStrip() {
               }}
             >
               <span
-                style={{ width: "4px", height: "4px", borderRadius: "50%", background: "#df2531", flexShrink: 0 }}
+                style={{ width: "4px", height: "4px", borderRadius: "50%", background: "#C41E3A", flexShrink: 0 }}
               />
               {tag}
             </span>

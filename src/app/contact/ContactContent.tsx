@@ -52,9 +52,9 @@ export function ContactContent() {
 
               <div style={{ display: "grid", gap: "16px" }}>
                 {[
-                  { icon: Phone, label: "Phone", value: "+44 7440 183728", href: "tel:+447440183728" },
-                  { icon: Mail, label: "Email", value: "contact@blockxint.com", href: "mailto:contact@blockxint.com" },
-                  { icon: MapPin, label: "Location", value: "18 Elmstead Avenue, Wembley, England, HA9 8NX", href: "#" },
+                  { icon: Phone, label: "Phone", value: "+44 7440183728", href: "tel:+447440183728" },
+                  { icon: Mail, label: "Email", value: "info@blockxint.com", href: "mailto:info@blockxint.com" },
+                  { icon: MapPin, label: "Location", value: "18 Elmstead Avenue, Wembley, England, HA9 8NX", href: "https://maps.google.com/?q=18+Elmstead+Avenue+Wembley+HA9+8NX" },
                 ].map(({ icon: Icon, label, value, href }) => (
                   <a
                     key={label}
@@ -72,7 +72,7 @@ export function ContactContent() {
                     }}
                     onMouseEnter={(e) => {
                       const el = e.currentTarget as HTMLElement;
-                      el.style.borderColor = "rgba(223,37,49,0.2)";
+                      el.style.borderColor = "rgba(196,30,58,0.2)";
                       el.style.background = "#1a1b21";
                     }}
                     onMouseLeave={(e) => {
@@ -83,10 +83,10 @@ export function ContactContent() {
                   >
                     <span style={{
                       width: "40px", height: "40px", borderRadius: "10px",
-                      background: "rgba(223,37,49,0.1)", border: "1px solid rgba(223,37,49,0.2)",
+                      background: "rgba(196,30,58,0.1)", border: "1px solid rgba(196,30,58,0.2)",
                       display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
                     }}>
-                      <Icon size={16} color="#df2531" />
+                      <Icon size={16} color="#C41E3A" />
                     </span>
                     <div>
                       <p style={{ margin: "0 0 2px", color: "rgba(255,255,255,0.4)", fontSize: "11px", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase" }}>{label}</p>
@@ -106,7 +106,7 @@ export function ContactContent() {
 
             {/* Right: Form */}
             <div style={{ background: "#17181d", border: "1px solid rgba(255,255,255,0.07)", borderRadius: "20px", overflow: "hidden" }}>
-              <div style={{ height: "4px", background: "#df2531" }} />
+              <div style={{ height: "4px", background: "#C41E3A" }} />
               <div style={{ padding: "36px" }}>
                 {submitted ? (
                   <div style={{ textAlign: "center", padding: "40px 0" }}>
@@ -144,7 +144,7 @@ export function ContactContent() {
                             borderRadius: "10px", color: "white", fontSize: "14px", outline: "none",
                             transition: "border-color 0.18s",
                           }}
-                          onFocus={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#df2531"; }}
+                          onFocus={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#C41E3A"; }}
                           onBlur={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)"; }}
                         />
                       </div>
@@ -189,7 +189,7 @@ export function ContactContent() {
                           borderRadius: "10px", color: "white", fontSize: "14px", outline: "none",
                           resize: "vertical", transition: "border-color 0.18s", minHeight: "100px",
                         }}
-                        onFocus={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#df2531"; }}
+                        onFocus={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "#C41E3A"; }}
                         onBlur={(e) => { (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,255,255,0.1)"; }}
                       />
                     </div>
@@ -197,15 +197,15 @@ export function ContactContent() {
                     <button
                       type="submit"
                       style={{
-                        padding: "16px", background: "#df2531", color: "white",
+                        padding: "16px", background: "#C41E3A", color: "white",
                         fontSize: "15px", fontWeight: 700, border: "none", borderRadius: "12px",
                         cursor: "pointer", letterSpacing: "0.04em",
-                        boxShadow: "0 8px 24px rgba(223,37,49,0.22)",
+                        boxShadow: "0 8px 24px rgba(196,30,58,0.22)",
                         transition: "background 0.2s", marginTop: "4px",
                         display: "flex", alignItems: "center", justifyContent: "center", gap: "8px",
                       }}
-                      onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#b81a26"; }}
-                      onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#df2531"; }}
+                      onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#9B1520"; }}
+                      onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#C41E3A"; }}
                     >
                       Send Message <ArrowRight size={16} />
                     </button>

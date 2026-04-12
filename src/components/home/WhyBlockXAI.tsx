@@ -51,7 +51,7 @@ export function WhyBlockXAI() {
               }}
             >
               WHY EMBRACE{" "}
-              <span style={{ color: "#df2531" }}>BLOCKCHAIN</span>{" "}
+              <span style={{ color: "#C41E3A" }}>BLOCKCHAIN</span>{" "}
               AND AI?
             </h2>
 
@@ -63,8 +63,8 @@ export function WhyBlockXAI() {
             {/* Large stat */}
             <div
               style={{
-                background: "rgba(223,37,49,0.08)",
-                border: "1px solid rgba(223,37,49,0.2)",
+                background: "rgba(196,30,58,0.08)",
+                border: "1px solid rgba(196,30,58,0.2)",
                 borderRadius: "16px",
                 padding: "28px 32px",
                 marginTop: "8px",
@@ -107,7 +107,7 @@ export function WhyBlockXAI() {
                 }}
                 onMouseEnter={(e) => {
                   const el = e.currentTarget as HTMLElement;
-                  el.style.borderColor = "rgba(223,37,49,0.22)";
+                  el.style.borderColor = "rgba(196,30,58,0.22)";
                   el.style.background = "#1a1b21";
                 }}
                 onMouseLeave={(e) => {
@@ -120,7 +120,7 @@ export function WhyBlockXAI() {
                   className="font-display"
                   style={{
                     fontSize: "1.8rem",
-                    color: "#df2531",
+                    color: "#C41E3A",
                     lineHeight: 1.1,
                     letterSpacing: "0.04em",
                     flexShrink: 0,

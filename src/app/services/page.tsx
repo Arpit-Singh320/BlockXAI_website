@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -67,7 +68,7 @@ const SERVICES_DETAIL = [
 
 export default function ServicesPage() {
   return (
-    <>
+    <PageTransition>
       <PageHero
         eyebrow="Our Services"
         title="FOUR PILLARS OF"
@@ -100,7 +101,7 @@ export default function ServicesPage() {
                   style={{
                     display: "block",
                     fontSize: "5rem",
-                    color: "rgba(223,37,49,0.2)",
+                    color: "rgba(196,30,58,0.2)",
                     lineHeight: 1,
                     letterSpacing: "0.02em",
                     marginBottom: "12px",
@@ -120,7 +121,7 @@ export default function ServicesPage() {
                 >
                   {svc.name.toUpperCase()}
                 </h2>
-                <p style={{ color: "#df2531", fontSize: "13px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "16px" }}>
+                <p style={{ color: "#C41E3A", fontSize: "13px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "16px" }}>
                   {svc.tagline}
                 </p>
                 <p style={{ color: "rgba(11,11,13,0.6)", fontSize: "14px", lineHeight: 1.7 }}>
@@ -168,14 +169,14 @@ export default function ServicesPage() {
                         width: "36px",
                         height: "36px",
                         borderRadius: "8px",
-                        background: "rgba(223,37,49,0.08)",
-                        border: "1px solid rgba(223,37,49,0.14)",
+                        background: "rgba(196,30,58,0.08)",
+                        border: "1px solid rgba(196,30,58,0.14)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         fontSize: "12px",
                         fontWeight: 800,
-                        color: "#df2531",
+                        color: "#C41E3A",
                         letterSpacing: "0.06em",
                         flexShrink: 0,
                       }}
@@ -215,10 +216,10 @@ export default function ServicesPage() {
               marginBottom: "20px",
             }}
           >
-            NOT SURE WHICH <span style={{ color: "#df2531" }}>SERVICE</span> YOU NEED?
+            NOT SURE WHICH <span style={{ color: "#C41E3A" }}>SERVICE</span> YOU NEED?
           </h2>
           <p style={{ color: "rgba(255,255,255,0.52)", fontSize: "15px", maxWidth: "480px", margin: "0 auto 32px", lineHeight: 1.7 }}>
-            Book a free consultation and we&apos;ll assess your needs and recommend the right approach — no obligation.
+            Get started today and we&apos;ll assess your needs and recommend the right approach — no obligation.
           </p>
           <Link
             href="/contact"
@@ -227,19 +228,19 @@ export default function ServicesPage() {
               alignItems: "center",
               gap: "10px",
               padding: "18px 36px",
-              background: "#df2531",
+              background: "#C41E3A",
               color: "white",
               fontSize: "16px",
               fontWeight: 700,
               textDecoration: "none",
               borderRadius: "12px",
-              boxShadow: "0 10px 28px rgba(223,37,49,0.26)",
+              boxShadow: "0 10px 28px rgba(196,30,58,0.26)",
             }}
           >
-            Book a Free Consultation <ArrowRight size={16} />
+            Get Started Today <ArrowRight size={16} />
           </Link>
         </div>
       </section>
-    </>
+    </PageTransition>
   );
 }

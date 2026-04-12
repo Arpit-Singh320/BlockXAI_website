@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { ARTICLES } from "@/lib/articles";
 
@@ -15,7 +16,7 @@ const REST = ARTICLES.slice(1);
 
 export default function ResourcesPage() {
   return (
-    <>
+    <PageTransition>
       <PageHero
         eyebrow="Resources & Insights"
         title="BLOCKCHAIN & AI"
@@ -54,7 +55,7 @@ export default function ResourcesPage() {
                   width: "300px",
                   height: "300px",
                   borderRadius: "50%",
-                  background: "radial-gradient(ellipse, rgba(223,37,49,0.16) 0%, transparent 70%)",
+                  background: "radial-gradient(ellipse, rgba(196,30,58,0.16) 0%, transparent 70%)",
                   pointerEvents: "none",
                 }}
               />
@@ -68,7 +69,7 @@ export default function ResourcesPage() {
                     {FEATURED.title}
                   </h2>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#df2531", fontSize: "14px", fontWeight: 700 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "#C41E3A", fontSize: "14px", fontWeight: 700 }}>
                   Read Article <ArrowRight size={14} />
                 </div>
               </div>
@@ -137,10 +138,10 @@ export default function ResourcesPage() {
                   {article.tags.slice(0, 3).map((t) => (
                     <span key={t} style={{
                       padding: "4px 10px",
-                      background: "rgba(223,37,49,0.06)",
-                      border: "1px solid rgba(223,37,49,0.12)",
+                      background: "rgba(196,30,58,0.06)",
+                      border: "1px solid rgba(196,30,58,0.12)",
                       borderRadius: "5px",
-                      color: "#df2531",
+                      color: "#C41E3A",
                       fontSize: "10px",
                       fontWeight: 800,
                       letterSpacing: "0.12em",
@@ -148,7 +149,7 @@ export default function ResourcesPage() {
                     }}>{t}</span>
                   ))}
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#df2531", fontSize: "13px", fontWeight: 700 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#C41E3A", fontSize: "13px", fontWeight: 700 }}>
                   Read More <ArrowRight size={13} />
                 </div>
               </Link>
@@ -160,7 +161,7 @@ export default function ResourcesPage() {
           .featured-article { transition: transform 0.22s; }
           .featured-article:hover { transform: translateY(-3px); }
           .article-card { transition: transform 0.22s, box-shadow 0.22s, border-color 0.22s; }
-          .article-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(11,11,13,0.08); border-color: rgba(223,37,49,0.18) !important; }
+          .article-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(11,11,13,0.08); border-color: rgba(196,30,58,0.18) !important; }
           @media (max-width: 800px) {
             .featured-article { grid-template-columns: 1fr !important; padding: 28px !important; }
             .articles-grid { grid-template-columns: 1fr !important; }
@@ -181,7 +182,7 @@ export default function ResourcesPage() {
               marginBottom: "20px",
             }}
           >
-            STAY AHEAD OF THE <span style={{ color: "#df2531" }}>CURVE</span>
+            STAY AHEAD OF THE <span style={{ color: "#C41E3A" }}>CURVE</span>
           </h2>
           <p style={{ color: "rgba(255,255,255,0.52)", fontSize: "15px", maxWidth: "440px", margin: "0 auto 32px", lineHeight: 1.7 }}>
             Get the latest insights on blockchain, AI, and enterprise digital transformation delivered directly to your inbox.
@@ -193,19 +194,19 @@ export default function ResourcesPage() {
               alignItems: "center",
               gap: "10px",
               padding: "16px 32px",
-              background: "#df2531",
+              background: "#C41E3A",
               color: "white",
               fontSize: "15px",
               fontWeight: 700,
               textDecoration: "none",
               borderRadius: "12px",
-              boxShadow: "0 8px 24px rgba(223,37,49,0.24)",
+              boxShadow: "0 8px 24px rgba(196,30,58,0.24)",
             }}
           >
             Contact Us <ArrowRight size={16} />
           </Link>
         </div>
       </section>
-    </>
+    </PageTransition>
   );
 }

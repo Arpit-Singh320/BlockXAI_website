@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -74,7 +75,7 @@ const INDUSTRIES = [
 
 export default function IndustriesPage() {
   return (
-    <>
+    <PageTransition>
       <PageHero
         eyebrow="Industries We Serve"
         title="BUILT FOR"
@@ -110,7 +111,7 @@ export default function IndustriesPage() {
                   style={{
                     display: "block",
                     fontSize: "5rem",
-                    color: ind.dark ? "rgba(223,37,49,0.24)" : "rgba(223,37,49,0.2)",
+                    color: ind.dark ? "rgba(196,30,58,0.24)" : "rgba(196,30,58,0.2)",
                     lineHeight: 1,
                     letterSpacing: "0.02em",
                   }}
@@ -122,10 +123,10 @@ export default function IndustriesPage() {
                 <span style={{
                   display: "inline-flex",
                   padding: "5px 12px",
-                  background: "rgba(223,37,49,0.1)",
-                  border: "1px solid rgba(223,37,49,0.2)",
+                  background: "rgba(196,30,58,0.1)",
+                  border: "1px solid rgba(196,30,58,0.2)",
                   borderRadius: "6px",
-                  color: "#df2531",
+                  color: "#C41E3A",
                   fontSize: "10px",
                   fontWeight: 800,
                   letterSpacing: "0.2em",
@@ -169,7 +170,7 @@ export default function IndustriesPage() {
                     border: ind.dark ? "1px solid rgba(255,255,255,0.07)" : "1px solid rgba(11,11,13,0.08)",
                     borderRadius: "14px",
                     padding: "24px 26px",
-                    borderLeft: "3px solid #df2531",
+                    borderLeft: "3px solid #C41E3A",
                   }}
                 >
                   <h3 style={{ margin: "0 0 10px", color: ind.dark ? "white" : "#0b0b0d", fontSize: "15px", fontWeight: 800, letterSpacing: "0.02em" }}>
@@ -207,7 +208,7 @@ export default function IndustriesPage() {
               marginBottom: "20px",
             }}
           >
-            YOUR INDUSTRY, <span style={{ color: "#df2531" }}>TRANSFORMED</span>
+            YOUR INDUSTRY, <span style={{ color: "#C41E3A" }}>TRANSFORMED</span>
           </h2>
           <p style={{ color: "rgba(255,255,255,0.52)", fontSize: "15px", maxWidth: "520px", margin: "0 auto 32px", lineHeight: 1.7 }}>
             Whether you are in real estate, legal, education, or any other sector, our integrated blockchain and AI technologies will propel your business into a future of transparency, efficiency, and sustainable growth.
@@ -219,19 +220,19 @@ export default function IndustriesPage() {
               alignItems: "center",
               gap: "10px",
               padding: "16px 32px",
-              background: "#df2531",
+              background: "#C41E3A",
               color: "white",
               fontSize: "15px",
               fontWeight: 700,
               textDecoration: "none",
               borderRadius: "12px",
-              boxShadow: "0 8px 24px rgba(223,37,49,0.24)",
+              boxShadow: "0 8px 24px rgba(196,30,58,0.24)",
             }}
           >
             Explore the Possibilities <ArrowRight size={16} />
           </Link>
         </div>
       </section>
-    </>
+    </PageTransition>
   );
 }

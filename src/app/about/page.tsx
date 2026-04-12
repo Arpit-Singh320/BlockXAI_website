@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { PageTransition } from "@/components/layout/PageTransition";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -26,7 +27,7 @@ const TEAM_ROLES = [
 
 export default function AboutPage() {
   return (
-    <>
+    <PageTransition>
       <PageHero
         eyebrow="About BlockXAI Limited"
         title="BRIDGING INNOVATION"
@@ -92,7 +93,7 @@ export default function AboutPage() {
                     width: "120px",
                     height: "120px",
                     borderRadius: "50%",
-                    background: "rgba(223,37,49,0.2)",
+                    background: "rgba(196,30,58,0.2)",
                     filter: "blur(30px)",
                     pointerEvents: "none",
                   }}
@@ -122,7 +123,7 @@ export default function AboutPage() {
                     zIndex: 1,
                   }}
                 >
-                  <span style={{ color: "#df2531", fontSize: "22px", fontWeight: 800 }}>—</span>
+                  <span style={{ color: "#C41E3A", fontSize: "22px", fontWeight: 800 }}>—</span>
                   <span style={{ color: "rgba(255,255,255,0.52)", fontSize: "13px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" }}>BlockXAI Limited Mission Statement</span>
                 </div>
               </div>
@@ -177,7 +178,7 @@ export default function AboutPage() {
               >
                 <span
                   className="font-display"
-                  style={{ fontSize: "3rem", color: "rgba(223,37,49,0.4)", lineHeight: 1, letterSpacing: "0.02em" }}
+                  style={{ fontSize: "3rem", color: "rgba(196,30,58,0.4)", lineHeight: 1, letterSpacing: "0.02em" }}
                 >
                   0{i + 1}
                 </span>
@@ -227,7 +228,7 @@ export default function AboutPage() {
                   color: "white",
                 }}
               >
-                SHAPING THE <span style={{ color: "#df2531" }}>DIGITAL</span> FUTURE
+                SHAPING THE <span style={{ color: "#C41E3A" }}>DIGITAL</span> FUTURE
               </h2>
               <p style={{ color: "rgba(255,255,255,0.58)", fontSize: "15px", lineHeight: 1.75, marginBottom: "24px" }}>
                 We envision a future where blockchain and AI redefine the business landscape. Blockchain&apos;s promise of transparency and security, combined with AI&apos;s ability to analyse and predict trends, will revolutionise how companies operate.
@@ -250,7 +251,7 @@ export default function AboutPage() {
                     border: "1px solid rgba(255,255,255,0.07)",
                     borderRadius: "12px",
                     padding: "20px 24px",
-                    borderLeft: "3px solid #df2531",
+                    borderLeft: "3px solid #C41E3A",
                   }}
                 >
                   <h4 style={{ margin: "0 0 8px", color: "white", fontSize: "14px", fontWeight: 800, letterSpacing: "0.06em", textTransform: "uppercase" }}>
@@ -290,7 +291,7 @@ export default function AboutPage() {
               marginBottom: "20px",
             }}
           >
-            READY TO WORK <span style={{ color: "#df2531" }}>TOGETHER?</span>
+            READY TO WORK <span style={{ color: "#C41E3A" }}>TOGETHER?</span>
           </h2>
           <p style={{ color: "rgba(255,255,255,0.5)", fontSize: "15px", maxWidth: "480px", margin: "0 auto 32px", lineHeight: 1.7 }}>
             Let&apos;s discuss how blockchain and AI can transform your specific business operations and create new opportunities.
@@ -303,13 +304,13 @@ export default function AboutPage() {
                 alignItems: "center",
                 gap: "10px",
                 padding: "16px 32px",
-                background: "#df2531",
+                background: "#C41E3A",
                 color: "white",
                 fontSize: "15px",
                 fontWeight: 700,
                 textDecoration: "none",
                 borderRadius: "12px",
-                boxShadow: "0 8px 24px rgba(223,37,49,0.24)",
+                boxShadow: "0 8px 24px rgba(196,30,58,0.24)",
               }}
             >
               Get in Touch <ArrowRight size={16} />
@@ -334,6 +335,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </>
+    </PageTransition>
   );
 }

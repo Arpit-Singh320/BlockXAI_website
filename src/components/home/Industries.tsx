@@ -82,7 +82,7 @@ export function Industries() {
                 const el = e.currentTarget as HTMLElement;
                 el.style.transform = "translateY(-4px)";
                 el.style.boxShadow = "0 16px 40px rgba(11,11,13,0.1)";
-                el.style.borderColor = "rgba(223,37,49,0.2)";
+                el.style.borderColor = "rgba(196,30,58,0.2)";
               }}
               onMouseLeave={(e) => {
                 const el = e.currentTarget as HTMLElement;
@@ -96,10 +96,10 @@ export function Industries() {
                 display: "inline-flex",
                 alignSelf: "flex-start",
                 padding: "5px 12px",
-                background: "rgba(223,37,49,0.08)",
-                border: "1px solid rgba(223,37,49,0.16)",
+                background: "rgba(196,30,58,0.08)",
+                border: "1px solid rgba(196,30,58,0.16)",
                 borderRadius: "6px",
-                color: "#df2531",
+                color: "#C41E3A",
                 fontSize: "10px",
                 fontWeight: 800,
                 letterSpacing: "0.18em",
@@ -122,13 +122,13 @@ export function Industries() {
               <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "grid", gap: "8px", flex: 1 }}>
                 {ind.highlights.map((h) => (
                   <li key={h} style={{ display: "flex", alignItems: "flex-start", gap: "10px", color: "rgba(11,11,13,0.6)", fontSize: "13px" }}>
-                    <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: "#df2531", flexShrink: 0, marginTop: "7px" }} />
+                    <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: "#C41E3A", flexShrink: 0, marginTop: "7px" }} />
                     {h}
                   </li>
                 ))}
               </ul>
 
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#df2531", fontSize: "13px", fontWeight: 700, marginTop: "8px" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "8px", color: "#C41E3A", fontSize: "13px", fontWeight: 700, marginTop: "8px" }}>
                 Explore Solutions
                 <ArrowRight size={13} />
               </div>
@@ -154,7 +154,7 @@ export function Industries() {
               letterSpacing: "0.04em",
               transition: "background 0.2s",
             }}
-            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#df2531"; }}
+            onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "#C41E3A"; }}
             onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = "#0b0b0d"; }}
           >
             All Industries

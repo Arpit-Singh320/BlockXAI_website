@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const NAV_LINKS = [
@@ -17,10 +19,12 @@ const NAV_LINKS = [
       { label: "Resources", href: "/resources" },
     ],
   },
+  { label: "Pay Invoice", href: "/pay-invoice" },
   { label: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -45,8 +49,14 @@ export function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
   return (
-    <header
+    <motion.header
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.45, ease: [0.4, 0, 0.2, 1] }}
       style={{
         position: "fixed",
         top: 0,
@@ -56,9 +66,9 @@ export function Navbar() {
         height: "80px",
         display: "flex",
         alignItems: "center",
-        transition: "background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease",
-        background: scrolled ? "rgba(11,11,13,0.95)" : "rgba(11,11,13,0.72)",
-        backdropFilter: "blur(18px)",
+        transition: "background 0.3s ease, border-color 0.3s ease",
+        background: scrolled ? "rgba(11,11,13,0.97)" : "rgba(11,11,13,0.72)",
+        backdropFilter: "blur(20px)",
         borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "1px solid transparent",
       }}
     >
@@ -147,23 +157,29 @@ export function Navbar() {
                   {link.label}
                   <ChevronDown size={12} style={{ transition: "transform 0.2s", transform: dropdownOpen ? "rotate(180deg)" : "rotate(0deg)" }} />
                 </button>
+                <AnimatePresence>
                 {dropdownOpen && (
-                  <div style={{
-                    position: "absolute",
-                    top: "calc(100% + 8px)",
-                    left: "0",
-                    minWidth: "240px",
-                    background: "#17181d",
-                    border: "1px solid rgba(255,255,255,0.08)",
-                    borderRadius: "16px",
-                    padding: "10px",
-                    boxShadow: "0 24px 56px rgba(0,0,0,0.4)",
-                    display: "grid",
-                    gap: "6px",
-                  }}
-                  onMouseEnter={openDropdown}
-                  onMouseLeave={closeDropdown}
-                >
+                  <motion.div
+                    initial={{ opacity: 0, y: -8, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: -8, scale: 0.97 }}
+                    transition={{ duration: 0.18, ease: [0.4, 0, 0.2, 1] }}
+                    style={{
+                      position: "absolute",
+                      top: "calc(100% + 8px)",
+                      left: "0",
+                      minWidth: "240px",
+                      background: "#17181d",
+                      border: "1px solid rgba(255,255,255,0.08)",
+                      borderRadius: "16px",
+                      padding: "10px",
+                      boxShadow: "0 24px 56px rgba(0,0,0,0.4)",
+                      display: "grid",
+                      gap: "6px",
+                    }}
+                    onMouseEnter={openDropdown}
+                    onMouseLeave={closeDropdown}
+                  >
                     {link.children.map((child) => (
                       <Link
                         key={child.label}
@@ -184,8 +200,8 @@ export function Navbar() {
                           transition: "background 0.18s, border-color 0.18s",
                         }}
                         onMouseEnter={(e) => {
-                          (e.currentTarget as HTMLElement).style.background = "rgba(223,37,49,0.1)";
-                          (e.currentTarget as HTMLElement).style.borderColor = "rgba(223,37,49,0.24)";
+                          (e.currentTarget as HTMLElement).style.background = "rgba(196,30,58,0.1)";
+                          (e.currentTarget as HTMLElement).style.borderColor = "rgba(196,30,58,0.24)";
                         }}
                         onMouseLeave={(e) => {
                           (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.03)";
@@ -195,8 +211,9 @@ export function Navbar() {
                         {child.label}
                       </Link>
                     ))}
-                  </div>
+                  </motion.div>
                 )}
+                </AnimatePresence>
               </div>
             ) : (
               <Link
@@ -208,56 +225,45 @@ export function Navbar() {
                   padding: "10px 14px",
                   borderRadius: "999px",
                   fontSize: "14px",
-                  fontWeight: 600,
-                  color: "rgba(255,255,255,0.78)",
+                  fontWeight: isActive(link.href) ? 700 : 600,
+                  color: isActive(link.href) ? "white" : "rgba(255,255,255,0.78)",
                   textDecoration: "none",
+                  background: isActive(link.href) ? "rgba(255,255,255,0.07)" : "none",
                   transition: "color 0.2s, background 0.2s",
+                  position: "relative",
                 }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLElement).style.color = "white";
                   (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.06)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.color = "rgba(255,255,255,0.78)";
-                  (e.currentTarget as HTMLElement).style.background = "none";
+                  (e.currentTarget as HTMLElement).style.color = isActive(link.href) ? "white" : "rgba(255,255,255,0.78)";
+                  (e.currentTarget as HTMLElement).style.background = isActive(link.href) ? "rgba(255,255,255,0.07)" : "none";
                 }}
               >
                 {link.label}
+                {isActive(link.href) && (
+                  <motion.span
+                    layoutId="nav-active-pill"
+                    style={{
+                      position: "absolute",
+                      bottom: "6px",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      width: "16px",
+                      height: "2px",
+                      background: "#C41E3A",
+                      borderRadius: "999px",
+                    }}
+                  />
+                )}
               </Link>
             )
           )}
         </nav>
 
-        {/* CTA + Mobile toggle */}
+        {/* Mobile toggle */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px", flexShrink: 0 }}>
-          {/* <Link
-            href="/contact"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              padding: "12px 22px",
-              borderRadius: "10px",
-              background: "#df2531",
-              color: "white",
-              fontSize: "14px",
-              fontWeight: 700,
-              textDecoration: "none",
-              boxShadow: "0 8px 24px rgba(223,37,49,0.22)",
-              transition: "background 0.2s, transform 0.2s",
-              letterSpacing: "0.02em",
-            }}
-            onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "#b81a26";
-              (e.currentTarget as HTMLElement).style.transform = "translateY(-1px)";
-            }}
-            onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "#df2531";
-              (e.currentTarget as HTMLElement).style.transform = "translateY(0)";
-            }}
-          >
-            Book a Consultation
-          </Link> */}
-
           {/* Mobile hamburger */}
           <button
             className="show-mobile"
@@ -279,8 +285,14 @@ export function Navbar() {
       </div>
 
       {/* Mobile drawer */}
+      <AnimatePresence>
       {mobileOpen && (
-        <div style={{
+        <motion.div
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -12 }}
+          transition={{ duration: 0.22, ease: [0.4, 0, 0.2, 1] }}
+          style={{
           position: "fixed",
           inset: "80px 0 0 0",
           background: "#0b0b0d",
@@ -291,27 +303,33 @@ export function Navbar() {
           gap: "8px",
           overflowY: "auto",
         }}>
-          {NAV_LINKS.map((link) => (
+          {NAV_LINKS.map((link, i) => (
             <div key={link.label}>
+              <motion.div
+                initial={{ opacity: 0, x: -12 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: i * 0.05, duration: 0.22 }}
+              >
               <Link
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 style={{
                   display: "block",
                   padding: "16px 20px",
-                  color: "white",
+                  color: isActive(link.href) ? "white" : "rgba(255,255,255,0.88)",
                   fontSize: "15px",
                   fontWeight: 700,
                   textDecoration: "none",
                   letterSpacing: "0.06em",
                   textTransform: "uppercase",
-                  border: "1px solid rgba(255,255,255,0.06)",
+                  border: isActive(link.href) ? "1px solid rgba(196,30,58,0.24)" : "1px solid rgba(255,255,255,0.06)",
                   borderRadius: "12px",
-                  background: "rgba(255,255,255,0.03)",
+                  background: isActive(link.href) ? "rgba(196,30,58,0.08)" : "rgba(255,255,255,0.03)",
                 }}
               >
                 {link.label}
               </Link>
+              </motion.div>
               {link.children && (
                 <div style={{ paddingLeft: "16px", paddingTop: "6px", display: "grid", gap: "6px" }}>
                   {link.children.map((child) => (
@@ -328,7 +346,7 @@ export function Navbar() {
                         textDecoration: "none",
                         letterSpacing: "0.06em",
                         textTransform: "uppercase",
-                        borderLeft: "2px solid #df2531",
+                        borderLeft: "2px solid #C41E3A",
                         paddingLeft: "16px",
                       }}
                     >
@@ -347,7 +365,7 @@ export function Navbar() {
               display: "block",
               padding: "18px",
               textAlign: "center",
-              background: "#df2531",
+              background: "#C41E3A",
               color: "white",
               fontSize: "15px",
               fontWeight: 800,
@@ -358,10 +376,11 @@ export function Navbar() {
               textTransform: "uppercase",
             }}
           >
-            Book a Consultation
+            Get Started Today
           </Link>
-        </div>
+        </motion.div>
       )}
+      </AnimatePresence>
 
       <style>{`
         @media (max-width: 900px) {
@@ -369,6 +388,6 @@ export function Navbar() {
           .show-mobile { display: flex !important; }
         }
       `}</style>
-    </header>
+    </motion.header>
   );
 }
