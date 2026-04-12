@@ -114,7 +114,7 @@ export default function Footer4() {
                 <div style={{ display: "grid", gap: "12px", marginBottom: "32px" }}>
                   {[
                     { icon: Phone, val: "+44 7440183728", href: "tel:+447440183728" },
-                    { icon: Mail, val: "info@blockxint.com", href: "mailto:info@blockxint.com" },
+                    { icon: Mail, val: "info@blockxai.xyz", href: "mailto:info@blockxai.xyz" },
                     { icon: MapPin, val: "18 Elmstead Avenue, Wembley, HA9 8NX", href: "https://maps.google.com/?q=18+Elmstead+Avenue+Wembley+HA9+8NX" },
                   ].map(({ icon: Icon, val, href }) => (
                     <a key={val} href={href} style={{ display: "flex", alignItems: "center", gap: "10px", textDecoration: "none", color: "rgba(255,255,255,0.5)", fontSize: "13px", transition: "color 0.2s" }}
