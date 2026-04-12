@@ -78,7 +78,7 @@ export function ConsultationCTA() {
           <div style={{ display: "grid", gap: "14px" }}>
             {[
               { icon: Phone, label: "+44 7440183728", href: "tel:+447440183728" },
-              { icon: Mail, label: "info@blockxint.com", href: "mailto:info@blockxint.com" },
+              { icon: Mail, label: "info@blockxai.xyz", href: "mailto:info@blockxai.xyz" },
               { icon: MapPin, label: "18 Elmstead Avenue, Wembley, England, HA9 8NX", href: "https://maps.google.com/?q=18+Elmstead+Avenue+Wembley+HA9+8NX" },
             ].map(({ icon: Icon, label, href }) => (
               <a

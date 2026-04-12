@@ -88,7 +88,7 @@ export function Footer() {
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                 <span style={{ color: "#C41E3A", fontSize: "11px", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.1em", flexShrink: 0 }}>Email</span>
-                <a href="mailto:info@blockxint.com" style={{ color: "rgba(255,255,255,0.72)", textDecoration: "none", fontSize: "13px" }}>info@blockxint.com</a>
+                <a href="mailto:info@blockxai.xyz" style={{ color: "rgba(255,255,255,0.72)", textDecoration: "none", fontSize: "13px" }}>info@blockxint.com</a>
               </div>
             </div>
           </div>
